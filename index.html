@@ -11,12 +11,16 @@
       font-family: 'Nunito', sans-serif;
       background-color: #121212;
       color: #f0f0f0;
+      text-align: center;
+    }
+
+    .container {
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      text-align: center;
+      padding: 40px 20px;
     }
 
     .logo {
@@ -49,15 +53,66 @@
     .buttons a:hover {
       background: #ffd54f;
     }
+
+    #contact {
+      width: 100%;
+      padding: 60px 20px;
+      background-color: #1e1e1e;
+    }
+
+    #contact h2 {
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    input, textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #f0f0f0;
+      color: #121212;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #ffd54f;
+    }
   </style>
 </head>
 <body>
-  <img src="ShunShineStudio\Sun-Shine Studios_Logo.png" alt="SunShine Studios Logo" class="logo" />
-  <h1>SunShine Studios</h1>
-  <p>We’re an indie game studio bringing bright ideas to life — one pixel at a time.</p>
-  <div class="buttons">
-    <a href="#">Contact</a>
-    <a href="#">Join Us</a>
+  <div class="container">
+    <img src="ShunShineStudio\Sun-Shine Studios_Logo.png" alt="SunShine Studios Logo" class="logo" />
+    <h1>SunShine Studios</h1>
+    <p>We’re an indie game studio bringing bright ideas to life — one pixel at a time.</p>
+    <div class="buttons">
+      <a href="#contact">Contact</a>
+    </div>
   </div>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/meoandqq" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
 </body>
 </html>
